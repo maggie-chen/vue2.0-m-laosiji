@@ -1,0 +1,36 @@
+@mixin px2px($name, $px) { 
+    #{$name}: ($px / 2) * 1; 
+    [data-dpr="2"] & { 
+        #{$name}: $px * 1; 
+    } 
+    [data-dpr="2.5"] & { 
+        #{$name}: ($px * 2.5 / 2) * 1; 
+    } 
+    [data-dpr="2.75"] & { 
+        #{$name}: ($px * 2.75 / 2) * 1; 
+    } 
+    [data-dpr="3"] & { 
+        #{$name}: ($px / 2 * 3) * 1 
+    } 
+    [data-dpr="4"] & { 
+        #{$name}: $px * 2; 
+    } 
+} 
+@mixin px2rem($property,$px-values,$baseline-px:75px,$support-for-ie:false){
+    $baseline-rem: $baseline-px / 1rem * 1;
+    @if $support-for-ie {
+        #{$property}: $px-values;
+    }
+    @if type-of($px-values) == "number"{
+        #{$property}: $px-values / $baseline-rem;
+    }
+    @else {
+        $rem-values:();
+        @each $value in $px-values{
+            @if $value == 0 or type-of($value) == "number"{
+                $rem-values: append($rem-values, $value / $baseline-rem);
+            }
+        }
+        #{$property}: $rem-values;
+    }
+} 

@@ -1,0 +1,179 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	/*覆盖ios显示的高亮颜色*/
+	-webkit-appearance: none;
+	/*解决iOS下无法正常渲染按钮的问题 */
+}
+
+a {
+	-webkit-touch-callout: none;
+	/*禁用系统默认菜单*/
+	text-decoration: none;	
+	color: #000;
+}
+
+a:hover,a:active,a:link,a:visited { 
+	text-decoration: none!important;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+} 
+
+ul,
+ul li {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+fieldset,
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+input,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit
+}
+
+button,
+input[type="submit"] {
+	border: none;
+	background: none;
+	appearance: none;
+	outline: none
+}
+
+input,
+textarea {
+	border: none;
+	background: none;
+	appearance: none;
+	outline: none
+}
+
+
+/*placeholder颜色*/
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #ccc;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+	color: #ccc;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #ccc;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+	color: #ccc;
+}
+
+em,
+i {
+	font-style: normal
+}
+
+textarea {
+	resize: none
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner,
+textarea::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+
+/*分屏幕样式*/
+
+[data-dpr="1"] * {
+	font-size: 14px;
+}
+
+[data-dpr="2"] * {
+	font-size: 28px;
+}
+/*for mx3*/
+[data-dpr="2.5"] * {
+	font-size: 35px;
+}
+/*for 小米note*/
+[data-dpr="2.75"] * {
+	font-size: 38.5px;
+}
+[data-dpr="3"] * {
+	font-size: 42px;
+}
+/*for 三星note4*/
+[data-dpr="4"] * { 
+	font-size: 56px;
+}
+
+/*自定义样式*/
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+.clear{
+	clear: both;
+	overflow: hidden;
+}
+
+.ovfl {
+	overflow: hidden;
+}
+
+.ac {
+	text-align: center;
+}
+
+.al {
+	text-align: left;
+}
+
+.ar {
+	text-align: right;
+}
+
+.abs {
+	position: absolute;
+}
+
+.mn {
+	margin: 0 !important;
+}
+
+.pn {
+	padding: 0 !important;
+}
+
+.hide {
+	display: none;
+}
+.fac{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
